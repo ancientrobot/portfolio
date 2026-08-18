@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<template id="__bundler_thumbnail" data-bg-color="#373432">
+  <svg viewBox="0 0 120 56" xmlns="http://www.w3.org/2000/svg">
+    <text x="60" y="34" text-anchor="middle" font-family="Georgia, serif" font-size="22" fill="#F0834A">BK</text>
+  </svg>
+</template>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;0,7..72,700;1,7..72,400&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+  body { margin: 0; background: #373432; color: #f4f1ed; font-family: Inter, system-ui, sans-serif; }
+  * { box-sizing: border-box; }
+  a { color: #E8702A; text-decoration: none; }
+  a:hover { color: #ffa060; }
+  ::selection { background: #E8702A; color: #fff; }
+</style>
+</helmet>
+<div style="max-width: 1440px; margin: 0 auto; padding: 0 clamp(18px, 5vw, 64px) 0;">
+
+  <header style="display: flex; align-items: baseline; justify-content: space-between; gap: 20px; padding: calc(clamp(18px, 3vw, 30px) + env(safe-area-inset-top, 0px)) 0 clamp(18px, 3vw, 30px); border-bottom: 1px solid #514e4b; position: sticky; top: 0; background: rgba(55,52,50,0.92); backdrop-filter: blur(8px); z-index: 20; flex-wrap: wrap; border-color: #FF8000EB">
+    <a href="#top" style="font-family: Literata, Georgia, serif; font-weight: 700; font-size: clamp(17px, 2.4vw, 21px); color: #F0834A; letter-spacing: -0.01em;">{{ ownerName }}</a>
+    <nav style="{{ navStyle }}">
+      <a href="#motion" style="color: #a9a29a; white-space: nowrap;" style-hover="color:#f4f1ed">Motion</a>
+      <a href="#retouching" style="color: #a9a29a; white-space: nowrap;" style-hover="color:#f4f1ed">Retouching</a>
+      <a href="#digital" style="color: #a9a29a; white-space: nowrap;" style-hover="color:#f4f1ed">Digital</a>
+      <a href="#print" style="color: #a9a29a; white-space: nowrap;" style-hover="color:#f4f1ed">Print</a>
+      <a href="#typography" style="color: #a9a29a; white-space: nowrap;" style-hover="color:#f4f1ed">Typography</a>
+    </nav>
+    <button type="button" onClick="{{ toggleMenu }}" aria-label="Sections menu" style="{{ burgerStyle }}">
+      <span style="font-size: 15px; line-height: 1;">{{ burgerGlyph }}</span>
+      <span>Sections</span>
+    </button>
+    <div style="{{ panelStyle }}">
+      <a href="#motion" onClick="{{ closeMenu }}" style="display: flex; align-items: center; min-height: 52px; padding: 0 2px; font-size: 17px; color: #f4f1ed; border-bottom: 1px solid #514e4b;">Motion</a>
+      <a href="#retouching" onClick="{{ closeMenu }}" style="display: flex; align-items: center; min-height: 52px; padding: 0 2px; font-size: 17px; color: #f4f1ed; border-bottom: 1px solid #514e4b;">Retouching</a>
+      <a href="#digital" onClick="{{ closeMenu }}" style="display: flex; align-items: center; min-height: 52px; padding: 0 2px; font-size: 17px; color: #f4f1ed; border-bottom: 1px solid #514e4b;">Digital</a>
+      <a href="#print" onClick="{{ closeMenu }}" style="display: flex; align-items: center; min-height: 52px; padding: 0 2px; font-size: 17px; color: #f4f1ed; border-bottom: 1px solid #514e4b;">Print</a>
+      <a href="#typography" onClick="{{ closeMenu }}" style="display: flex; align-items: center; min-height: 52px; padding: 0 2px; font-size: 17px; color: #f4f1ed;">Typography</a>
+      <a href="{{ mailto }}" onClick="{{ closeMenu }}" style="display: flex; align-items: center; min-height: 52px; padding: 0 2px; font-family: Literata, Georgia, serif; font-size: 17px; color: #F0834A;">{{ ownerEmail }}</a>
+    </div>
+  </header>
+
+  <section id="top" data-screen-label="Hero" style="padding: clamp(48px, 12vh, 130px) 0 clamp(40px, 8vh, 90px);">
+    
+    <h1 style="font-family: Literata, Georgia, serif; font-weight: 400; font-size: clamp(2.5rem, 8.4vw, 6.6rem); line-height: 1; letter-spacing: -0.035em; margin: 0 0 0 -5px; max-width: 20ch; text-wrap: pretty"><span style="color: #E8702A;">I do the work of four freelancers</span> and only argue with myself.</h1>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: clamp(20px, 4vw, 56px); margin-top: clamp(28px, 5vw, 54px); align-items: start;">
+      <p style="font-size: clamp(17px, 2.1vw, 21px); line-height: 1.5; color: #cfc8c0; margin: 0; max-width: 46ch; text-wrap: pretty;">Five years of formal art training, an unhealthy respect for kerning, and a habit of finishing things on time. Motion, retouching, digital, print and type — all from the same pair of hands.</p>
+      <p style="font-size: 15px; line-height: 1.7; color: #a9a29a; margin: 0;">Contact:<br>
+        <a href="{{ mailto }}" style="color: #F0834A; border-bottom: 1px solid rgba(240,131,74,0.4);">{{ ownerEmail }}</a>
+      </p>
+    </div>
+  </section>
+
+  <section id="motion" data-screen-label="Motion" style="padding: clamp(40px, 8vh, 90px) 0;">
+    <div data-reveal="" style="display: flex; align-items: baseline; justify-content: space-between; gap: 16px; border-top: 1px solid #f4f1ed; padding-top: 14px; margin-bottom: clamp(18px, 3vw, 30px);">
+      <h2 style="font-family: Literata, Georgia, serif; font-size: clamp(1.6rem, 4vw, 2.6rem); font-weight: 600; letter-spacing: -0.02em; margin: 0;"><sc-if value="{{ sectionNumbers }}" hint-placeholder-val="{{ true }}"><span style="font-family: ui-monospace, Menlo, monospace; font-size: 0.42em; color: #F0834A; vertical-align: 0.9em; margin-right: 0.6em;">01</span></sc-if>Motion</h2>
+      <span style="font-family: ui-monospace, Menlo, monospace; font-size: 12px; color: #a9a29a; letter-spacing: 0.08em; white-space: nowrap;">8 pieces</span>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: clamp(12px, 2vw, 22px);">
+      <a href="piece.html?id=motion-1" data-reveal="" style="display: block;" style-hover="opacity:0.92">
+        <div style="{{ cardMediaStyle }}">
+          <video src="uploads/motion-1787064915133-42ok.mp4" muted="{{ yes }}" loop="{{ yes }}" autoplay="{{ yes }}" playsinline="{{ yes }}" preload="metadata" style="{{ cardVideoStyle }}"></video>
+        </div>
+      </a>
+      <a href="piece.html?id=motion-2" data-reveal="" style="display: block;" style-hover="opacity:0.92">
+        <div style="{{ cardMediaStyle }}">
+          <video src="uploads/motion-1787064914819-sslv.mp4" muted="{{ yes }}" loop="{{ yes }}" autoplay="{{ yes }}" playsinline="{{ yes }}" preload="metadata" style="{{ cardVideoStyle }}"></video>
+        </div>
+      </a>
+      <a href="piece.html?id=motion-3" data-reveal="" style="display: block;" style-hover="opacity:0.92">
+        <div style="{{ cardMediaStyle }}">
+          <video src="uploads/motion-1787064914929-u4ie.mp4" muted="{{ yes }}" loop="{{ yes }}" autoplay="{{ yes }}" playsinline="{{ yes }}" preload="metadata" style="{{ cardVideoStyle }}"></video>
+        </div>
+      </a>
+      <a href="piece.html?id=motion-4" data-reveal="" style="display: block;" style-hover="opacity:0.92">
+        <div style="{{ cardMediaStyle }}">
+          <video src="uploads/motion-1787064914763-ryqj.mp4" muted="{{ yes }}" loop="{{ yes }}" autoplay="{{ yes }}" playsinline="{{ yes }}" preload="metadata" style="{{ cardVideoStyle }}"></video>
+        </div>
+      </a>
+      <a href="piece.html?id=motion-5" data-reveal="" style="display: block;" style-hover="opacity:0.92">
+        <div style="{{ cardMediaStyle }}">
+          <video src="uploads/motion-1787064914786-khrm.mp4" muted="{{ yes }}" loop="{{ yes }}" autoplay="{{ yes }}" playsinline="{{ yes }}" preload="metadata" style="{{ cardVideoStyle }}"></video>
+        </div>
+      </a>
+      <a href="piece.html?id=motion-6" data-reveal="" style="display: block;" style-hover="opacity:0.92">
+        <div style="{{ cardMediaStyle }}">
+          <video src="uploads/motion-1787064920236-v95b.mp4" muted="{{ yes }}" loop="{{ yes }}" autoplay="{{ yes }}" playsinline="{{ yes }}" preload="metadata" style="{{ cardVideoStyle }}"></video>
+        </div>
+      </a>
+      <a href="piece.html?id=motion-7" data-reveal="" style="display: block;" style-hover="opacity:0.92">
+        <div style="{{ cardMediaStyle }}">
+          <video src="uploads/motion-1787064915019-3cl0.mp4" muted="{{ yes }}" loop="{{ yes }}" autoplay="{{ yes }}" playsinline="{{ yes }}" preload="metadata" style="{{ cardVideoStyle }}"></video>
+        </div>
+      </a>
+      <a href="piece.html?id=motion-8" data-reveal="" style="display: block;" style-hover="opacity:0.92">
+        <div style="{{ cardMediaStyle }}">
+          <video src="uploads/motion-1787064914877-0t1z.mp4" muted="{{ yes }}" loop="{{ yes }}" autoplay="{{ yes }}" playsinline="{{ yes }}" preload="metadata" style="{{ cardVideoStyle }}"></video>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <section id="retouching" data-screen-label="Retouching" style="padding: clamp(40px, 8vh, 90px) 0;">
+    <div data-reveal="" style="display: flex; align-items: baseline; justify-content: space-between; gap: 16px; border-top: 1px solid #f4f1ed; padding-top: 14px; margin-bottom: clamp(18px, 3vw, 30px);">
+      <h2 style="font-family: Literata, Georgia, serif; font-size: clamp(1.6rem, 4vw, 2.6rem); font-weight: 600; letter-spacing: -0.02em; margin: 0;"><sc-if value="{{ sectionNumbers }}" hint-placeholder-val="{{ true }}"><span style="font-family: ui-monospace, Menlo, monospace; font-size: 0.42em; color: #F0834A; vertical-align: 0.9em; margin-right: 0.6em;">02</span></sc-if>Retouching</h2>
+      <span style="font-family: ui-monospace, Menlo, monospace; font-size: 12px; color: #a9a29a; letter-spacing: 0.08em; white-space: nowrap;">8 pieces</span>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: clamp(12px, 2vw, 22px);">
+      <a href="piece.html?id=retouch-4" data-reveal="" style="display: block;" style-hover="opacity:0.92">
+        <div style="aspect-ratio: 1 / 1; background: url('assets/retouch-4-after.jpg') center/cover; position: relative;"></div>
+      </a>
+      <a href="piece.html?id=retouch-1" data-reveal="" style="display: block;" style-hover="opacity:0.92">
+        <div style="aspect-ratio: 1 / 1; background: url('assets/retouch-1-after.jpg') center/cover; position: relative;"></div>
+      </a>
+      <a href="piece.html?id=retouch-2" data-reveal="" style="display: block;" style-hover="opacity:0.92">
+        <div style="aspect-ratio: 1 / 1; background: url('assets/retouch-2-after.jpg') center/cover; position: relative;"></div>
+      </a>
+      <a href="piece.html?id=retouch-3" data-reveal="" style="display: block;" style-hover="opacity:0.92">
+        <div style="aspect-ratio: 1 / 1; background: url('assets/retouch-3-after.jpg') center/cover; position: relative;"></div>
+      </a>
+      <a href="piece.html?id=retouch-5" data-reveal="" style="display: block;" style-hover="opacity:0.92">
+        <div style="aspect-ratio: 1 / 1; background: url('assets/retouch-5-after.jpg') center/cover; position: relative;"></div>
+      </a>
+      <a href="piece.html?id=retouch-6" data-reveal="" style="display: block;" style-hover="opacity:0.92">
+        <div style="aspect-ratio: 1 / 1; background: url('assets/retouch-6-after.jpg') center/cover; position: relative;"></div>
+      </a>
+      <a href="piece.html?id=retouch-7" data-reveal="" style="display: block;" style-hover="opacity:0.92">
+        <div style="aspect-ratio: 1 / 1; background: url('assets/retouch-7-after.jpg') center/cover; position: relative;"></div>
+      </a>
+      <a href="piece.html?id=retouch-8" data-reveal="" style="display: block;" style-hover="opacity:0.92">
+        <div style="aspect-ratio: 1 / 1; background: url('assets/retouch-8-after.jpg') center/cover; position: relative;"></div>
+      </a>
+    </div>
+  </section>
+
+  <section id="digital" data-screen-label="Digital" style="padding: clamp(40px, 8vh, 90px) 0;">
+    <div data-reveal="" style="display: flex; align-items: baseline; justify-content: space-between; gap: 16px; border-top: 1px solid #f4f1ed; padding-top: 14px; margin-bottom: clamp(18px, 3vw, 30px);">
+      <h2 style="font-family: Literata, Georgia, serif; font-size: clamp(1.6rem, 4vw, 2.6rem); font-weight: 600; letter-spacing: -0.02em; margin: 0;"><sc-if value="{{ sectionNumbers }}" hint-placeholder-val="{{ true }}"><span style="font-family: ui-monospace, Menlo, monospace; font-size: 0.42em; color: #F0834A; vertical-align: 0.9em; margin-right: 0.6em;">03</span></sc-if>Digital</h2>
+      <span style="font-family: ui-monospace, Menlo, monospace; font-size: 12px; color: #a9a29a; letter-spacing: 0.08em; white-space: nowrap;">4 pieces</span>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: clamp(12px, 2vw, 22px);">
+      <a href="piece.html?id=digital-1" data-reveal="" style="display: block;" style-hover="opacity:0.92">
+        <div style="aspect-ratio: 1 / 1; background: repeating-linear-gradient(135deg, #403d3a 0 14px, #494644 14px 28px); position: relative;">
+          <span style="position: absolute; left: 14px; bottom: 14px; font-family: ui-monospace, Menlo, monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #b3aca4; background: #373432; padding: 5px 8px;">app screens</span>
+        </div>
+      </a>
+      <a href="piece.html?id=digital-2" data-reveal="" style="display: block;" style-hover="opacity:0.92">
+        <div style="aspect-ratio: 1 / 1; background: repeating-linear-gradient(135deg, #403d3a 0 14px, #494644 14px 28px); position: relative;">
+          <span style="position: absolute; left: 14px; bottom: 14px; font-family: ui-monospace, Menlo, monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #b3aca4; background: #373432; padding: 5px 8px;">marketplace ui</span>
+        </div>
+      </a>
+      <a href="piece.html?id=digital-3" data-reveal="" style="display: block;" style-hover="opacity:0.92">
+        <div style="aspect-ratio: 1 / 1; background: repeating-linear-gradient(135deg, #403d3a 0 14px, #494644 14px 28px); position: relative;">
+          <span style="position: absolute; left: 14px; bottom: 14px; font-family: ui-monospace, Menlo, monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #b3aca4; background: #373432; padding: 5px 8px;">design system</span>
+        </div>
+      </a>
+      <a href="piece.html?id=digital-4" data-reveal="" style="display: block;" style-hover="opacity:0.92">
+        <div style="aspect-ratio: 1 / 1; background: repeating-linear-gradient(135deg, #403d3a 0 14px, #494644 14px 28px); position: relative;">
+          <span style="position: absolute; left: 14px; bottom: 14px; font-family: ui-monospace, Menlo, monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #b3aca4; background: #373432; padding: 5px 8px;">onboarding flow</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <section id="print" data-screen-label="Print" style="padding: clamp(40px, 8vh, 90px) 0;">
+    <div data-reveal="" style="display: flex; align-items: baseline; justify-content: space-between; gap: 16px; border-top: 1px solid #f4f1ed; padding-top: 14px; margin-bottom: clamp(18px, 3vw, 30px);">
+      <h2 style="font-family: Literata, Georgia, serif; font-size: clamp(1.6rem, 4vw, 2.6rem); font-weight: 600; letter-spacing: -0.02em; margin: 0;"><sc-if value="{{ sectionNumbers }}" hint-placeholder-val="{{ true }}"><span style="font-family: ui-monospace, Menlo, monospace; font-size: 0.42em; color: #F0834A; vertical-align: 0.9em; margin-right: 0.6em;">04</span></sc-if>Print</h2>
+      <span style="font-family: ui-monospace, Menlo, monospace; font-size: 12px; color: #a9a29a; letter-spacing: 0.08em; white-space: nowrap;">4 pieces</span>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: clamp(12px, 2vw, 22px);">
+      <a href="piece.html?id=print-1" data-reveal="" style="display: block;" style-hover="opacity:0.92">
+        <div style="aspect-ratio: 1 / 1; background: repeating-linear-gradient(135deg, #403d3a 0 14px, #494644 14px 28px); position: relative; display: grid; place-items: center;">
+          
+          <span style="position: absolute; left: 14px; bottom: 14px; font-family: ui-monospace, Menlo, monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #b3aca4; background: #373432; padding: 5px 8px;">poster series</span>
+        </div>
+      </a>
+      <a href="piece.html?id=print-2" data-reveal="" style="display: block;" style-hover="opacity:0.92">
+        <div style="aspect-ratio: 1 / 1; background: repeating-linear-gradient(135deg, #403d3a 0 14px, #494644 14px 28px); position: relative; display: grid; place-items: center;">
+          
+          <span style="position: absolute; left: 14px; bottom: 14px; font-family: ui-monospace, Menlo, monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #b3aca4; background: #373432; padding: 5px 8px;">report spread</span>
+        </div>
+      </a>
+      <a href="piece.html?id=print-3" data-reveal="" style="display: block;" style-hover="opacity:0.92">
+        <div style="aspect-ratio: 1 / 1; background: repeating-linear-gradient(135deg, #403d3a 0 14px, #494644 14px 28px); position: relative; display: grid; place-items: center;">
+          
+          <span style="position: absolute; left: 14px; bottom: 14px; font-family: ui-monospace, Menlo, monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #b3aca4; background: #373432; padding: 5px 8px;">packaging mock</span>
+        </div>
+      </a>
+      <a href="piece.html?id=print-4" data-reveal="" style="display: block;" style-hover="opacity:0.92">
+        <div style="aspect-ratio: 1 / 1; background: repeating-linear-gradient(135deg, #403d3a 0 14px, #494644 14px 28px); position: relative; display: grid; place-items: center;">
+          
+          <span style="position: absolute; left: 14px; bottom: 14px; font-family: ui-monospace, Menlo, monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #b3aca4; background: #373432; padding: 5px 8px;">identity manual</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <section id="typography" data-screen-label="Typography" style="padding: clamp(40px, 8vh, 90px) 0;">
+    <div data-reveal="" style="display: flex; align-items: baseline; justify-content: space-between; gap: 16px; border-top: 1px solid #f4f1ed; padding-top: 14px; margin-bottom: clamp(18px, 3vw, 30px);">
+      <h2 style="font-family: Literata, Georgia, serif; font-size: clamp(1.6rem, 4vw, 2.6rem); font-weight: 600; letter-spacing: -0.02em; margin: 0;"><sc-if value="{{ sectionNumbers }}" hint-placeholder-val="{{ true }}"><span style="font-family: ui-monospace, Menlo, monospace; font-size: 0.42em; color: #F0834A; vertical-align: 0.9em; margin-right: 0.6em;">05</span></sc-if>Typography</h2>
+      <span style="font-family: ui-monospace, Menlo, monospace; font-size: 12px; color: #a9a29a; letter-spacing: 0.08em; white-space: nowrap;">4 pieces</span>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: clamp(12px, 2vw, 22px);">
+      <a href="piece.html?id=type-1" data-reveal="" style="display: block;" style-hover="opacity:0.92">
+        <div style="aspect-ratio: 1 / 1; background: repeating-linear-gradient(135deg, #403d3a 0 14px, #494644 14px 28px); position: relative; display: grid; place-items: center;">
+          <span style="font-family: Literata, Georgia, serif; font-size: clamp(3rem, 8vw, 5.5rem); letter-spacing: -0.04em; color: #f4f1ed;">Aa</span>
+          <span style="position: absolute; left: 14px; bottom: 14px; font-family: ui-monospace, Menlo, monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #b3aca4; background: #373432; padding: 5px 8px;">specimen · grotesk</span>
+        </div>
+      </a>
+      <a href="piece.html?id=type-2" data-reveal="" style="display: block;" style-hover="opacity:0.92">
+        <div style="aspect-ratio: 1 / 1; background: repeating-linear-gradient(135deg, #403d3a 0 14px, #494644 14px 28px); position: relative; display: grid; place-items: center;">
+          
+          <span style="position: absolute; left: 14px; bottom: 14px; font-family: ui-monospace, Menlo, monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #b3aca4; background: #373432; padding: 5px 8px;">wordmark studies</span>
+        </div>
+      </a>
+      <a href="piece.html?id=type-3" data-reveal="" style="display: block;" style-hover="opacity:0.92">
+        <div style="aspect-ratio: 1 / 1; background: repeating-linear-gradient(135deg, #403d3a 0 14px, #494644 14px 28px); position: relative; display: grid; place-items: center;">
+          
+          <span style="position: absolute; left: 14px; bottom: 14px; font-family: ui-monospace, Menlo, monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #b3aca4; background: #373432; padding: 5px 8px;">masthead lettering</span>
+        </div>
+      </a>
+      <a href="piece.html?id=type-4" data-reveal="" style="display: block;" style-hover="opacity:0.92">
+        <div style="aspect-ratio: 1 / 1; background: repeating-linear-gradient(135deg, #403d3a 0 14px, #494644 14px 28px); position: relative; display: grid; place-items: center;">
+          
+          <span style="position: absolute; left: 14px; bottom: 14px; font-family: ui-monospace, Menlo, monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #b3aca4; background: #373432; padding: 5px 8px;">type on signage</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <footer data-reveal="" style="border-top: 1px solid #f4f1ed; padding: clamp(36px, 7vh, 90px) 0 clamp(40px, 8vh, 100px); display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: clamp(20px, 4vw, 48px); align-items: end;">
+    <h2 style="font-family: Literata, Georgia, serif; font-size: clamp(1.8rem, 5.5vw, 3.4rem); font-weight: 400; letter-spacing: -0.03em; line-height: 1.02; margin: 0; max-width: 22ch; text-wrap: pretty;">Got a job that needs <span style="color: #E8702A;">four specialists</span>? Hire one of me.</h2>
+    <div style="font-size: 15px; line-height: 1.8; color: #a9a29a;">
+      <a href="{{ mailto }}" style="font-family: Literata, Georgia, serif; font-size: clamp(18px, 2.6vw, 24px); color: #F0834A;">{{ ownerEmail }}</a><br>
+      <span>{{ ownerName }} · Based wherever the light is good</span><br>
+      <a href="https://www.linkedin.com/in/bradkumar/" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; font-family: ui-monospace, Menlo, monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #F0834A;" style-hover="color:#ffa060">LinkedIn <span style="font-size: 13px;">↗</span></a>
+    </div>
+  </footer>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;ownerName&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Brad Kumar&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;ownerEmail&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;ancientrobot@gmail.com&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;sectionNumbers&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Display&quot;},&quot;revealAnimations&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Display&quot;}}">
+const PANEL_BG = '#373432';
+const PANEL_BORDER = '#514e4b';
+const INK = '#f4f1ed';
+const MUTED = '#a9a29a';
+
+class Component extends DCLogic {
+  compareRef = React.createRef();
+  state = { pct: 55, narrow: typeof window !== 'undefined' && window.innerWidth < 760, menuOpen: false };
+  applyStickyHeaders() {
+    const bar = document.querySelector('header');
+    const top = bar ? bar.getBoundingClientRect().height : 72;
+    document.querySelectorAll('section > [data-reveal]').forEach((el) => {
+      if (!el.querySelector('h2')) return;
+      if (this.state.narrow) {
+        el.style.position = 'sticky';
+        el.style.top = Math.round(top - 1) + 'px';
+        el.style.zIndex = '10';
+        el.style.background = '#373432';
+        el.style.paddingBottom = '10px';
+        el.style.opacity = '1';
+        el.style.transform = 'none';
+        el.style.clipPath = 'none';
+        el.style.letterSpacing = '';
+      } else {
+        el.style.position = '';
+        el.style.top = '';
+        el.style.zIndex = '';
+        el.style.background = '';
+        el.style.paddingBottom = '';
+      }
+    });
+  }
+  componentDidMount() {
+    this._onResize = () => {
+      const narrow = window.innerWidth < 760;
+      if (narrow !== this.state.narrow) this.setState({ narrow: narrow, menuOpen: false }, () => this.applyStickyHeaders());
+      else this.applyStickyHeaders();
+    };
+    window.addEventListener('resize', this._onResize);
+    this._onResize();
+    const reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (this.props.revealAnimations === false || reduced || !('IntersectionObserver' in window)) return;
+    const hiddenFor = (el, pos) => {
+      if (el.querySelector('h2')) {
+        return { transform: 'translateX(-56px) translateY(18px)', clipPath: 'inset(0 100% 0 0)', letterSpacing: '0.06em', filter: 'none' };
+      }
+      return { transform: 'translateY(110px) scale(0.86) rotate(' + (pos % 2 === 0 ? -2.6 : 2.6) + 'deg)', filter: 'blur(14px)', clipPath: 'none', letterSpacing: '' };
+    };
+    const show = (el) => {
+      el.style.opacity = '1';
+      el.style.transform = 'none';
+      el.style.filter = 'none';
+      el.style.clipPath = 'none';
+      el.style.letterSpacing = '';
+    };
+    const hide = (el) => {
+      const h = el.__hidden;
+      if (!h || el.style.position === 'sticky') return;
+      el.style.opacity = '0';
+      el.style.transform = h.transform;
+      el.style.filter = h.filter;
+      el.style.clipPath = h.clipPath;
+      el.style.letterSpacing = h.letterSpacing;
+    };
+    const revealAll = () => document.querySelectorAll('[data-reveal]').forEach(show);
+    this._fired = false;
+    this._safety = setTimeout(() => { if (!this._fired) revealAll(); }, 1600);
+    window.addEventListener('beforeprint', revealAll);
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          this._fired = true;
+          show(e.target);
+        } else if (this._fired) {
+          hide(e.target);
+        }
+      });
+    }, { rootMargin: '0px 0px -14% 0px', threshold: 0.02 });
+    Array.from(document.querySelectorAll('[data-reveal]')).forEach((el) => {
+      const isHeader = !!el.querySelector('h2');
+      const pos = el.parentElement ? Array.prototype.indexOf.call(el.parentElement.children, el) : 0;
+      const seen = el.getBoundingClientRect().top < window.innerHeight * 0.55;
+      el.__hidden = hiddenFor(el, pos);
+      el.style.willChange = 'opacity, transform, filter';
+      el.style.transition = 'opacity 900ms cubic-bezier(.16,1,.3,1), transform 1150ms cubic-bezier(.16,1,.3,1), filter 800ms ease-out, clip-path 1050ms cubic-bezier(.16,1,.3,1), letter-spacing 1050ms cubic-bezier(.16,1,.3,1)';
+      el.style.transitionDelay = (pos % 3) * 170 + 'ms';
+      if (!seen && !(isHeader && this.state.narrow)) hide(el);
+      io.observe(el);
+    });
+    this._io = io;
+    this.applyStickyHeaders();
+    document.querySelectorAll('video').forEach((v) => { v.muted = true; v.loop = true; v.play && v.play().catch(() => {}); });
+    const hero = document.querySelector('h1');
+    const eyebrow = document.querySelector('#top [data-parallax]');
+    this._onScroll = () => {
+      const y = window.scrollY || window.pageYOffset || 0;
+      if (hero) {
+        hero.style.transform = 'translateY(' + (y * -0.14).toFixed(1) + 'px)';
+        hero.style.opacity = String(Math.max(0.15, 1 - y / 760));
+      }
+      if (eyebrow) eyebrow.style.transform = 'translateX(' + Math.min(90, y * 0.2).toFixed(1) + 'px)';
+    };
+    window.addEventListener('scroll', this._onScroll, { passive: true });
+  }
+  componentWillUnmount() {
+    if (this._io) this._io.disconnect();
+    if (this._safety) clearTimeout(this._safety);
+    if (this._onResize) window.removeEventListener('resize', this._onResize);
+    if (this._onScroll) window.removeEventListener('scroll', this._onScroll);
+  }
+  setFromClientX(x) {
+    const el = this.compareRef.current;
+    if (!el) return;
+    const r = el.getBoundingClientRect();
+    this.setState({ pct: Math.max(0, Math.min(100, ((x - r.left) / r.width) * 100)) });
+  }
+  renderVals() {
+    return {
+      ownerName: this.props.ownerName ?? 'Brad Kumar',
+      ownerEmail: this.props.ownerEmail ?? 'ancientrobot@gmail.com',
+      mailto: 'mailto:' + (this.props.ownerEmail ?? 'ancientrobot@gmail.com'),
+      yes: true,
+      cardMediaStyle: this.state.narrow
+        ? { background: '#403d3a', position: 'relative', overflow: 'hidden' }
+        : { aspectRatio: '1 / 1', background: '#403d3a', position: 'relative', overflow: 'hidden' },
+      cardVideoStyle: this.state.narrow
+        ? { width: '100%', height: 'auto', display: 'block' }
+        : { width: '100%', height: '100%', objectFit: 'cover', display: 'block', background: '#403d3a' },
+      navStyle: this.state.narrow ? { display: 'none' } : { display: 'flex', gap: 'clamp(12px, 2vw, 26px)', fontSize: '13px', letterSpacing: '0.04em', textTransform: 'uppercase' },
+      burgerStyle: this.state.narrow
+        ? { display: 'inline-flex', alignItems: 'center', gap: '8px', minHeight: '44px', padding: '0 12px 0 10px', border: '1px solid ' + INK, background: 'transparent', color: INK, font: 'inherit', fontSize: '12px', letterSpacing: '0.12em', textTransform: 'uppercase', cursor: 'pointer' }
+        : { display: 'none' },
+      burgerGlyph: this.state.menuOpen ? '✕' : '☰',
+      panelStyle: this.state.narrow && this.state.menuOpen
+        ? { position: 'absolute', top: '100%', left: 0, right: 0, background: PANEL_BG, borderBottom: '1px solid ' + PANEL_BORDER, display: 'flex', flexDirection: 'column', padding: '4px 0 14px', boxShadow: '0 14px 30px rgba(0,0,0,0.06)' }
+        : { display: 'none' },
+      toggleMenu: () => this.setState((s) => ({ menuOpen: !s.menuOpen })),
+      closeMenu: () => this.setState({ menuOpen: false }),
+      muted: MUTED,
+      sectionNumbers: this.props.sectionNumbers !== false,
+      revealAnimations: this.props.revealAnimations !== false
+    };
+  }
+}
+
+</script>
+</body>
+</html>

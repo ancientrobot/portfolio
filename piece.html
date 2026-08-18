@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<template id="__bundler_thumbnail" data-bg-color="#373432">
+  <svg viewBox="0 0 120 56" xmlns="http://www.w3.org/2000/svg">
+    <text x="60" y="34" text-anchor="middle" font-family="Georgia, serif" font-size="22" fill="#F0834A">BK</text>
+  </svg>
+</template>
+<x-dc>
+<helmet>
+<meta name="ext-resource-dependency" content="uploads/motion-1787064915133-42ok.mp4" data-resource-id="vid_motion-1" />
+<meta name="ext-resource-dependency" content="uploads/motion-1787064914819-sslv.mp4" data-resource-id="vid_motion-2" />
+<meta name="ext-resource-dependency" content="uploads/motion-1787064914929-u4ie.mp4" data-resource-id="vid_motion-3" />
+<meta name="ext-resource-dependency" content="uploads/motion-1787064914763-ryqj.mp4" data-resource-id="vid_motion-4" />
+<meta name="ext-resource-dependency" content="uploads/motion-1787064914786-khrm.mp4" data-resource-id="vid_motion-5" />
+<meta name="ext-resource-dependency" content="uploads/motion-1787064920236-v95b.mp4" data-resource-id="vid_motion-6" />
+<meta name="ext-resource-dependency" content="uploads/motion-1787064915019-3cl0.mp4" data-resource-id="vid_motion-7" />
+<meta name="ext-resource-dependency" content="uploads/motion-1787064914877-0t1z.mp4" data-resource-id="vid_motion-8" />
+<meta name="ext-resource-dependency" content="assets/retouch-4-before.jpg" data-resource-id="img_retouch-4_before" />
+<meta name="ext-resource-dependency" content="assets/retouch-4-after.jpg" data-resource-id="img_retouch-4_after" />
+<meta name="ext-resource-dependency" content="assets/retouch-1-before.jpg" data-resource-id="img_retouch-1_before" />
+<meta name="ext-resource-dependency" content="assets/retouch-1-after.jpg" data-resource-id="img_retouch-1_after" />
+<meta name="ext-resource-dependency" content="assets/retouch-2-before.jpg" data-resource-id="img_retouch-2_before" />
+<meta name="ext-resource-dependency" content="assets/retouch-2-after.jpg" data-resource-id="img_retouch-2_after" />
+<meta name="ext-resource-dependency" content="assets/retouch-3-before.jpg" data-resource-id="img_retouch-3_before" />
+<meta name="ext-resource-dependency" content="assets/retouch-3-after.jpg" data-resource-id="img_retouch-3_after" />
+<meta name="ext-resource-dependency" content="assets/retouch-5-before.jpg" data-resource-id="img_retouch-5_before" />
+<meta name="ext-resource-dependency" content="assets/retouch-5-after.jpg" data-resource-id="img_retouch-5_after" />
+<meta name="ext-resource-dependency" content="assets/retouch-6-before.jpg" data-resource-id="img_retouch-6_before" />
+<meta name="ext-resource-dependency" content="assets/retouch-6-after.jpg" data-resource-id="img_retouch-6_after" />
+<meta name="ext-resource-dependency" content="assets/retouch-7-before.jpg" data-resource-id="img_retouch-7_before" />
+<meta name="ext-resource-dependency" content="assets/retouch-7-after.jpg" data-resource-id="img_retouch-7_after" />
+<meta name="ext-resource-dependency" content="assets/retouch-8-before.jpg" data-resource-id="img_retouch-8_before" />
+<meta name="ext-resource-dependency" content="assets/retouch-8-after.jpg" data-resource-id="img_retouch-8_after" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;0,7..72,700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: #373432; color: #f4f1ed; font-family: Inter, system-ui, sans-serif; }
+  * { box-sizing: border-box; }
+  a { color: #E8702A; text-decoration: none; }
+  a:hover { color: #ffa060; }
+  input[type=range] { accent-color: #E8702A; }
+</style>
+</helmet>
+<div style="max-width: 1440px; margin: 0 auto; padding: 0 clamp(18px, 5vw, 64px) clamp(40px, 8vh, 90px);">
+
+  <header style="position: sticky; top: 0; z-index: 20; background: rgba(55,52,50,0.92); backdrop-filter: blur(8px); display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px 0; border-bottom: 1px solid #514e4b;">
+    <a href="index.html" onClick="{{ onBack }}" style="display: inline-flex; align-items: center; gap: 10px; min-height: 44px; font-size: 14px; letter-spacing: 0.02em; color: #f4f1ed;" style-hover="color:#F0834A">
+      <span style="font-family: ui-monospace, Menlo, monospace; font-size: 16px;">←</span>
+      <span>Back to work</span>
+    </a>
+    <a href="index.html" style="font-family: Literata, Georgia, serif; font-weight: 700; font-size: 16px; color: #F0834A;">{{ ownerName }}</a>
+  </header>
+
+<sc-if value="{{ wide }}" hint-placeholder-val="{{ true }}">
+  <nav style="display: flex; align-items: center; gap: 8px; padding: 18px 0 0; font-family: ui-monospace, Menlo, monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #a9a29a;">
+    <a href="index.html" style="color: #a9a29a;" style-hover="color:#F0834A">Work</a>
+    <span>/</span>
+    <span>{{ section }}</span>
+  </nav>
+</sc-if>
+
+  <h1 style="font-family: Literata, Georgia, serif; font-weight: 700; font-size: clamp(2rem, 6vw, 4rem); line-height: 1.02; letter-spacing: -0.03em; margin: 10px 0 clamp(18px, 3vw, 30px); max-width: 24ch; text-wrap: pretty;">{{ title }}</h1>
+
+  <sc-if value="{{ isCompare }}" hint-placeholder-val="{{ false }}">
+    <div>
+      <div ref="{{ compareRef }}" onPointerDown="{{ onPointerDown }}" onPointerMove="{{ onPointerMove }}" onPointerUp="{{ onPointerUp }}" style="{{ beforeMediaStyle }}">
+        <span style="position: absolute; right: 14px; top: 14px; font-family: ui-monospace, Menlo, monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #b3aca4; background: #373432; padding: 6px 9px;">before</span>
+        <div style="{{ afterStyle }}">
+          <div style="{{ afterFillStyle }}"></div>
+          <span style="position: absolute; left: 14px; top: 14px; font-family: ui-monospace, Menlo, monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #fff; background: #E8702A; padding: 6px 9px;">after</span>
+        </div>
+        <div style="{{ handleStyle }}">
+          <div style="width: 44px; height: 44px; flex: 0 0 44px; border-radius: 50%; background: #E8702A; color: #fff; display: grid; place-items: center; font-family: ui-monospace, Menlo, monospace; font-size: 13px; box-shadow: 0 2px 12px rgba(0,0,0,0.18);">↔</div>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ isVideo }}" hint-placeholder-val="{{ false }}">
+    <video src="{{ videoSrc }}" onPlay="{{ onVideoPlay }}" controls="{{ yes }}" loop="{{ yes }}" autoplay="{{ yes }}" muted="{{ yes }}" playsinline="{{ yes }}" style="{{ videoStyle }}"></video>
+  </sc-if>
+  <sc-if value="{{ isPlain }}" hint-placeholder-val="{{ true }}">
+    <div style="{{ plainMediaStyle }}">
+      <span style="position: absolute; left: clamp(12px, 2vw, 22px); bottom: clamp(12px, 2vw, 20px); font-family: ui-monospace, Menlo, monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #b3aca4; background: #373432; padding: 6px 10px;">{{ slotLabel }}</span>
+    </div>
+  </sc-if>
+
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1200,&quot;height&quot;:900},&quot;ownerName&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Brad Kumar&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;ownerEmail&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;ancientrobot@gmail.com&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+function RES(id, fallback) {
+  return (typeof window !== 'undefined' && window.__resources && window.__resources[id]) ? window.__resources[id] : fallback;
+}
+const PIECES = [
+  { id: 'motion-1', section: 'Motion', title: 'GTBR — cloud launch film', year: '2026', role: 'Design, animation', tools: 'After Effects', video: 'uploads/motion-1787064915133-42ok.mp4', blurb: 'A launch film for a cloud product, built to survive being watched on mute in a feed.' },
+  { id: 'motion-2', section: 'Motion', title: 'Dive Deeper with Sharks', year: '2026', role: 'Design, animation', tools: 'After Effects', video: 'uploads/motion-1787064914819-sslv.mp4', blurb: 'Campaign spot cut square for social — type timed so the payoff lands before the thumb does.' },
+  { id: 'motion-3', section: 'Motion', title: 'HVAC flash promo', year: '2025', role: 'Design, animation', tools: 'After Effects', video: 'uploads/motion-1787064914929-u4ie.mp4', blurb: 'A fast offer spot: one message, one number, no wasted frames.' },
+  { id: 'motion-4', section: 'Motion', title: 'Chinook — Stronger', year: '2025', role: 'Design, animation', tools: 'After Effects', video: 'uploads/motion-1787064914763-ryqj.mp4', blurb: 'Six seconds from the Stronger series — same system, different subject, cut for Meta feed.' },
+  { id: 'motion-5', section: 'Motion', title: 'Grizzly Bear — Stronger', year: '2025', role: 'Design, animation', tools: 'After Effects', video: 'uploads/motion-1787064914786-khrm.mp4', blurb: 'Second in the Stronger set. Built from one master comp so the whole series stays consistent.' },
+  { id: 'motion-6', section: 'Motion', title: 'Whistler Pow — Softer', year: '2025', role: 'Design, animation', tools: 'After Effects', video: 'uploads/motion-1787064920236-v95b.mp4', blurb: 'The Softer counterpart: same grid, gentler pacing, colder palette.' },
+  { id: 'motion-7', section: 'Motion', title: 'Omega-3 — Meta feed', year: '2024', role: 'Design, animation', tools: 'Illustrator, After Effects', video: 'uploads/motion-1787064915019-3cl0.mp4', blurb: 'Fifteen seconds of product explanation that never asks the viewer to read twice.' },
+  { id: 'motion-8', section: 'Motion', title: 'Nature Colour — On Now', year: '2024', role: 'Design, animation', tools: 'After Effects', video: 'uploads/motion-1787064914877-0t1z.mp4', blurb: 'An exhibition promo built around bloom timing — square, muted-first, and short.' },
+  { id: 'retouch-4', before: 'assets/retouch-4-before.jpg', after: 'assets/retouch-4-after.jpg', section: 'Retouching', title: 'Solaz — campaign retouch', year: '2026', role: 'Retouching, colour', tools: 'Capture One, Photoshop', compare: true, blurb: 'Eighteen frames for a swimwear campaign: sand cleaned, water rebuilt, skin left alone. Drag to see how much of the work is meant to be invisible.' },
+  { id: 'retouch-1', before: 'assets/retouch-1-before.jpg', after: 'assets/retouch-1-after.jpg', section: 'Retouching', title: 'Editorial beauty', year: '2026', role: 'Retouching', tools: 'Capture One, Photoshop', compare: true, blurb: 'Skin kept as skin: dodge and burn, frequency separation only where it earns its keep. Drag the handle to see what changed — and what deliberately did not.' },
+  { id: 'retouch-2', before: 'assets/retouch-2-before.jpg', after: 'assets/retouch-2-after.jpg', section: 'Retouching', title: 'Product — glassware', year: '2025', role: 'Retouching, compositing', tools: 'Photoshop', compare: true, blurb: 'Fourteen exposures stacked into one bottle: highlights, edges, liquid and label each shot separately, then rebuilt by hand.' },
+  { id: 'retouch-3', before: 'assets/retouch-3-before.jpg', after: 'assets/retouch-3-after.jpg', section: 'Retouching', title: 'Interior composite', year: '2025', role: 'Retouching', tools: 'Photoshop, Lightroom', compare: true, blurb: 'Daylight blended into a tungsten set, plus the quiet removal of one very persistent radiator.' },
+  { id: 'retouch-5', before: 'assets/retouch-5-before.jpg', after: 'assets/retouch-5-after.jpg', section: 'Retouching', title: 'Portrait retouching', year: '2026', role: 'Retouching', tools: 'Photoshop', compare: true, blurb: 'Natural skin work for a corporate portrait series — no plastic, no melt, just even light and a clean edge.' },
+  { id: 'retouch-6', before: 'assets/retouch-6-before.jpg', after: 'assets/retouch-6-after.jpg', section: 'Retouching', title: 'Food — tasting menu', year: '2025', role: 'Retouching, compositing', tools: 'Photoshop', compare: true, blurb: 'Steam, sauce and garnish rebuilt from five plates of the same dish before the fifth one went cold.' },
+  { id: 'retouch-7', before: 'assets/retouch-7-before.jpg', after: 'assets/retouch-7-after.jpg', section: 'Retouching', title: 'Automotive — studio', year: '2025', role: 'Retouching', tools: 'Photoshop', compare: true, blurb: 'Reflections stitched from a full lighting pass; paint kept honest, chrome kept dangerous.' },
+  { id: 'retouch-8', before: 'assets/retouch-8-before.jpg', after: 'assets/retouch-8-after.jpg', section: 'Retouching', title: 'Landscape — dusk cleanup', year: '2024', role: 'Retouching', tools: 'Lightroom, Photoshop', compare: true, blurb: 'Power lines and a stray crane removed from a dusk shot, sky graded back to what it actually looked like.' },
+  { id: 'digital-1', section: 'Digital', title: 'Sonder — end-to-end product design', year: '2026', role: 'Product design', tools: 'Figma, prototyping', slot: 'drop app screens · 2400×1500', blurb: 'Research, flows, interface and a shipped design system for an iOS app about slowing down. Twenty-two screens, one type scale, zero gradients.' },
+  { id: 'digital-2', section: 'Digital', title: 'Marketplace redesign', year: '2025', role: 'UX + UI', tools: 'Figma', slot: 'drop marketplace ui', blurb: 'Rebuilt search and checkout around what people actually did instead of what the funnel diagram hoped they would.' },
+  { id: 'digital-3', section: 'Digital', title: 'Component library', year: '2024', role: 'Design systems', tools: 'Figma, tokens', slot: 'drop component sheet', blurb: 'Ninety components, documented well enough that engineers stopped asking me things. Bittersweet.' },
+  { id: 'digital-4', section: 'Digital', title: 'Onboarding flow — Halo', year: '2024', role: 'UX + UI', tools: 'Figma, Principle', slot: 'drop onboarding screens', blurb: 'Five screens between download and first success, cut down from eleven. The removed six were everyone\u2019s favourites.' },
+  { id: 'print-1', section: 'Print', title: 'Exhibition posters', year: '2026', role: 'Design', tools: 'InDesign, litho', slot: 'drop poster series', blurb: 'Six B1 posters, two spot inks, one uncoated stock that fought back for a week.' },
+  { id: 'print-2', section: 'Print', title: 'Annual report', year: '2025', role: 'Editorial design', tools: 'InDesign', slot: 'drop report spread', blurb: '124 pages of numbers arranged so a human being could read them. Charts drawn, not generated.' },
+  { id: 'print-3', section: 'Print', title: 'Packaging — Ostra', year: '2024', role: 'Identity + packaging', tools: 'Illustrator, dielines', slot: 'drop packaging mock', blurb: 'Identity, structure and production art for a small-batch seafood tinning company. Yes, I drew the dielines too.' },
+  { id: 'print-4', section: 'Print', title: 'Field guide — Norlys', year: '2023', role: 'Editorial design', tools: 'InDesign', slot: 'drop guide spread', blurb: 'A pocket field guide printed on paper thin enough to fold into a jacket and tough enough to survive it. 96 pages, two inks.' },
+  { id: 'type-1', section: 'Typography', title: 'Grotesk in progress — specimen', year: 'wip', role: 'Type design', tools: 'Glyphs', slot: 'drop specimen · 2400×1200', blurb: 'A four-weight grotesk with an intentionally strange g. Currently at 340 glyphs and one existential question about the ampersand.' },
+  { id: 'type-3', section: 'Typography', title: 'Editorial mastheads', year: '2025', role: 'Lettering', tools: 'Glyphs, Illustrator', slot: 'drop masthead lettering', blurb: 'Drawn mastheads for three independent magazines — each one built from the same skeleton and then argued with until it stopped looking like the others.' },
+  { id: 'type-2', section: 'Typography', title: 'Custom wordmarks', year: '2023—26', role: 'Lettering', tools: 'Glyphs, Illustrator', slot: 'drop wordmark studies', blurb: 'Drawn letterforms for eleven small brands. Every curve corrected by eye, then corrected again the next morning.' },
+  { id: 'type-4', section: 'Typography', title: 'Wayfinding type', year: '2024', role: 'Type design, lettering', tools: 'Glyphs', slot: 'drop signage photo', blurb: 'A condensed sign face drawn for a hospital campus — tested at 40 metres, in rain, by people in a hurry.' }
+];
+
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    let id = 'motion-1';
+    try {
+      const q = new URLSearchParams(window.location.search).get('id');
+      if (q && PIECES.some((p) => p.id === q)) id = q;
+    } catch (e) {}
+    this.state = { id: id, pct: 55, dragging: false, narrow: typeof window !== 'undefined' && window.innerWidth < 760 };
+    this.compareRef = React.createRef();
+  }
+  componentDidMount() {
+    if (!(document.referrer && document.referrer.indexOf('index.html') !== -1 && window.history.length > 1)) window.scrollTo(0, 0);
+    this._onResize = () => {
+      const narrow = window.innerWidth < 760;
+      if (narrow !== this.state.narrow) this.setState({ narrow: narrow });
+    };
+    window.addEventListener('resize', this._onResize);
+    setTimeout(() => document.querySelectorAll('video').forEach((v) => { v.muted = true; v.loop = true; }), 0);
+  }
+  componentWillUnmount() { if (this._onResize) window.removeEventListener('resize', this._onResize); }
+  setFromClientX(x) {
+    const el = this.compareRef.current;
+    if (!el) return;
+    const r = el.getBoundingClientRect();
+    const pct = Math.max(0, Math.min(100, ((x - r.left) / r.width) * 100));
+    this.setState({ pct: pct });
+  }
+  renderVals() {
+    const i = PIECES.findIndex((p) => p.id === this.state.id);
+    const p = PIECES[i];
+    const prev = PIECES[(i - 1 + PIECES.length) % PIECES.length];
+    const next = PIECES[(i + 1) % PIECES.length];
+    const email = this.props.ownerEmail ?? 'ancientrobot@gmail.com';
+    const pct = this.state.pct;
+    return {
+      ownerName: this.props.ownerName ?? 'Brad Kumar',
+      ownerEmail: email,
+      mailto: 'mailto:' + email,
+      wide: !this.state.narrow,
+      yes: true,
+      beforeMediaStyle: Object.assign({}, this.state.narrow ? { width: '100%', height: 'auto', position: 'relative', overflow: 'hidden', touchAction: 'none', cursor: 'ew-resize', userSelect: 'none' } : { position: 'relative', width: '100%', aspectRatio: '3 / 2', overflow: 'hidden', touchAction: 'none', cursor: 'ew-resize', userSelect: 'none' }, p.before ? { backgroundImage: "url('" + RES('img_' + p.id + '_before', p.before) + "')", backgroundSize: this.state.narrow ? 'cover' : 'contain', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundColor: '#403d3a' } : { background: 'repeating-linear-gradient(135deg, #343130 0 16px, #3d3a38 16px 32px)' }),
+      videoStyle: { width: '100%', height: 'auto', maxHeight: '80vh', background: '#403d3a', display: 'block' },
+      onBack: (e) => {
+        if (document.referrer && document.referrer.indexOf('index.html') !== -1 && window.history.length > 1) {
+          e.preventDefault();
+          window.history.back();
+        }
+      },
+      onVideoPlay: (e) => {
+        if (!this.state.narrow) return;
+        const v = e.currentTarget;
+        const req = v.requestFullscreen || v.webkitEnterFullscreen || v.webkitRequestFullscreen;
+        if (req) { try { req.call(v); } catch (err) {} }
+      },
+      plainMediaStyle: { width: '100%', aspectRatio: this.state.narrow ? '3 / 4' : '16 / 10', background: 'repeating-linear-gradient(135deg, #403d3a 0 16px, #494644 16px 32px)', position: 'relative' },
+      section: p.section,
+      title: p.title,
+      year: p.year,
+      role: p.role,
+      tools: p.tools,
+      blurb: p.blurb,
+      slotLabel: p.slot || '',
+      isCompare: !!p.compare,
+      beforeSrc: p.before || '',
+      afterSrc: p.after || '',
+      isPlain: !p.compare && !p.video,
+      isVideo: !!p.video,
+      videoSrc: p.video ? RES('vid_' + p.id, p.video) : '',
+      pct: pct,
+      pctLabel: Math.round(pct),
+      compareRef: this.compareRef,
+      afterStyle: { position: 'absolute', inset: 0, clipPath: 'inset(0 ' + (100 - pct) + '% 0 0)' },
+      afterFillStyle: p.after
+        ? { position: 'absolute', inset: 0, backgroundImage: "url('" + RES('img_' + p.id + '_after', p.after) + "')", backgroundSize: this.state.narrow ? 'cover' : 'contain', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundColor: '#403d3a' }
+        : { position: 'absolute', inset: 0, background: 'repeating-linear-gradient(135deg, #463f31 0 16px, #554c3c 16px 32px)' },
+      handleStyle: { position: 'absolute', top: 0, bottom: 0, left: pct + '%', width: '2px', background: '#E8702A', display: 'flex', alignItems: 'center', justifyContent: 'center', marginLeft: '-1px' },
+      onPointerDown: (e) => { e.currentTarget.setPointerCapture(e.pointerId); this.setState({ dragging: true }); this.setFromClientX(e.clientX); },
+      onPointerMove: (e) => { if (this.state.dragging) this.setFromClientX(e.clientX); },
+      onPointerUp: () => this.setState({ dragging: false }),
+      onRange: (e) => this.setState({ pct: parseFloat(e.target.value) }),
+      prevHref: 'piece.html?id=' + prev.id,
+      nextHref: 'piece.html?id=' + next.id,
+      prevTitle: prev.title,
+      nextTitle: next.title
+    };
+  }
+}
+
+</script>
+</body>
+</html>
