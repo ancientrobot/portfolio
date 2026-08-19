@@ -70,42 +70,42 @@
     <div class="piece-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: clamp(12px, 2vw, 22px);">
       <a href="piece.html?id=motion-1" data-reveal="" style="display: block;" style-hover="opacity:0.92">
         <div style="{{ cardMediaStyle }}">
-          <video src="uploads/motion-1787064915133-42ok.mp4" muted="{{ yes }}" loop="{{ yes }}" autoplay="{{ yes }}" playsinline="{{ yes }}" preload="metadata" style="{{ cardVideoStyle }}"></video>
+          <img src="assets/motion-1-thumb.jpg" style="{{ cardVideoStyle }}">
         </div>
       </a>
       <a href="piece.html?id=motion-2" data-reveal="" style="display: block;" style-hover="opacity:0.92">
         <div style="{{ cardMediaStyle }}">
-          <video src="uploads/motion-1787064914819-sslv.mp4" muted="{{ yes }}" loop="{{ yes }}" autoplay="{{ yes }}" playsinline="{{ yes }}" preload="metadata" style="{{ cardVideoStyle }}"></video>
+          <img src="assets/motion-2-thumb.jpg" style="{{ cardVideoStyle }}">
         </div>
       </a>
       <a href="piece.html?id=motion-3" data-reveal="" style="display: block;" style-hover="opacity:0.92">
         <div style="{{ cardMediaStyle }}">
-          <video src="uploads/HVAC.mp4" muted="{{ yes }}" loop="{{ yes }}" autoplay="{{ yes }}" playsinline="{{ yes }}" preload="metadata" style="{{ cardVideoStyle }}"></video>
+          <img src="assets/motion-3-thumb.jpg" style="{{ cardVideoStyle }}">
         </div>
       </a>
       <a href="piece.html?id=motion-4" data-reveal="" style="display: block;" style-hover="opacity:0.92">
         <div style="{{ cardMediaStyle }}">
-          <video src="uploads/motion-1787064914763-ryqj.mp4" muted="{{ yes }}" loop="{{ yes }}" autoplay="{{ yes }}" playsinline="{{ yes }}" preload="metadata" style="{{ cardVideoStyle }}"></video>
+          <img src="assets/motion-4-thumb.jpg" style="{{ cardVideoStyle }}">
         </div>
       </a>
       <a href="piece.html?id=motion-5" data-reveal="" style="display: block;" style-hover="opacity:0.92">
         <div style="{{ cardMediaStyle }}">
-          <video src="uploads/motion-1787064914786-khrm.mp4" muted="{{ yes }}" loop="{{ yes }}" autoplay="{{ yes }}" playsinline="{{ yes }}" preload="metadata" style="{{ cardVideoStyle }}"></video>
+          <img src="assets/motion-5-thumb.jpg" style="{{ cardVideoStyle }}">
         </div>
       </a>
       <a href="piece.html?id=motion-6" data-reveal="" style="display: block;" style-hover="opacity:0.92">
         <div style="{{ cardMediaStyle }}">
-          <video src="uploads/motion-1787064920236-v95b.mp4" muted="{{ yes }}" loop="{{ yes }}" autoplay="{{ yes }}" playsinline="{{ yes }}" preload="metadata" style="{{ cardVideoStyle }}"></video>
+          <img src="assets/motion-6-thumb.jpg" style="{{ cardVideoStyle }}">
         </div>
       </a>
       <a href="piece.html?id=motion-7" data-reveal="" style="display: block;" style-hover="opacity:0.92">
         <div style="{{ cardMediaStyle }}">
-          <video src="uploads/motion-1787064915019-3cl0.mp4" muted="{{ yes }}" loop="{{ yes }}" autoplay="{{ yes }}" playsinline="{{ yes }}" preload="metadata" style="{{ cardVideoStyle }}"></video>
+          <img src="assets/motion-7-thumb.jpg" style="{{ cardVideoStyle }}">
         </div>
       </a>
       <a href="piece.html?id=motion-8" data-reveal="" style="display: block;" style-hover="opacity:0.92">
         <div style="{{ cardMediaStyle }}">
-          <video src="uploads/motion-1787064914877-0t1z.mp4" muted="{{ yes }}" loop="{{ yes }}" autoplay="{{ yes }}" playsinline="{{ yes }}" preload="metadata" style="{{ cardVideoStyle }}"></video>
+          <img src="assets/motion-8-thumb.jpg" style="{{ cardVideoStyle }}">
         </div>
       </a>
     </div>
@@ -313,20 +313,6 @@ class Component extends DCLogic {
     });
     this._io = io;
     this.applyStickyHeaders();
-    const cardVideos = document.querySelectorAll('.piece-grid video');
-    cardVideos.forEach((v) => { v.muted = true; v.loop = true; });
-    if ('IntersectionObserver' in window) {
-      const vio = new IntersectionObserver((entries) => {
-        entries.forEach((e) => {
-          if (e.isIntersecting) e.target.play && e.target.play().catch(() => {});
-          else e.target.pause && e.target.pause();
-        });
-      }, { rootMargin: '200px 0px', threshold: 0.01 });
-      cardVideos.forEach((v) => vio.observe(v));
-      this._videoIo = vio;
-    } else {
-      cardVideos.forEach((v) => { v.play && v.play().catch(() => {}); });
-    }
     const hero = document.querySelector('h1');
     const eyebrow = document.querySelector('#top [data-parallax]');
     this._onScroll = () => {
@@ -340,7 +326,6 @@ class Component extends DCLogic {
     window.addEventListener('scroll', this._onScroll, { passive: true });
   }
   componentWillUnmount() {
-    if (this._videoIo) this._videoIo.disconnect();
     if (this._io) this._io.disconnect();
     if (this._safety) clearTimeout(this._safety);
     if (this._onResize) window.removeEventListener('resize', this._onResize);
