@@ -313,7 +313,20 @@ class Component extends DCLogic {
     });
     this._io = io;
     this.applyStickyHeaders();
-    document.querySelectorAll('video').forEach((v) => { v.muted = true; v.loop = true; v.play && v.play().catch(() => {}); });
+    const cardVideos = document.querySelectorAll('.piece-grid video');
+    cardVideos.forEach((v) => { v.muted = true; v.loop = true; });
+    if ('IntersectionObserver' in window) {
+      const vio = new IntersectionObserver((entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) e.target.play && e.target.play().catch(() => {});
+          else e.target.pause && e.target.pause();
+        });
+      }, { rootMargin: '200px 0px', threshold: 0.01 });
+      cardVideos.forEach((v) => vio.observe(v));
+      this._videoIo = vio;
+    } else {
+      cardVideos.forEach((v) => { v.play && v.play().catch(() => {}); });
+    }
     const hero = document.querySelector('h1');
     const eyebrow = document.querySelector('#top [data-parallax]');
     this._onScroll = () => {
@@ -327,6 +340,7 @@ class Component extends DCLogic {
     window.addEventListener('scroll', this._onScroll, { passive: true });
   }
   componentWillUnmount() {
+    if (this._videoIo) this._videoIo.disconnect();
     if (this._io) this._io.disconnect();
     if (this._safety) clearTimeout(this._safety);
     if (this._onResize) window.removeEventListener('resize', this._onResize);
